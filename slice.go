@@ -1,7 +1,8 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+)
 func main(){
 	// This is an array-like data structure that we don't specify the number of element it has to store.
 	

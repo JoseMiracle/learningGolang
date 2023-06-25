@@ -19,5 +19,4 @@ func main(){
 	join_words := strings.Join(words, " ");
 	fmt.Printf("%s\n", join_words);
 
-	// more maninpulation will be added 
 }
