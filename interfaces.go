@@ -41,8 +41,8 @@ func main() {
 		radius: 3,
 	}
 
-	
-	Print(c1)
+	checkInstance(c1)
+
 
 	// For rectangle
 	fmt.Println("\nShape: rectangle")
@@ -50,12 +50,23 @@ func main() {
 		length: 3,
 		breadth: 5,
 	}
-
-	Print(r1)
+	
+	checkInstance(r1)
 
 }
 
-func Print(s Shape) {
-	fmt.Println(s.area())
-	fmt.Println(s.perimeter())
+
+
+// Checking the instance of Shape
+func checkInstance(s Shape){
+	switch type_of_instance := s.(type){
+	case circle:
+		fmt.Println(type_of_instance.area())
+		break
+	case rectangle:
+		fmt.Println(type_of_instance.area())
+	default:
+		fmt.Println("Instance unknown")
+	}
+	
 }
